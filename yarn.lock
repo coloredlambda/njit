@@ -46,6 +46,14 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@meltwater/phi@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@meltwater/phi/-/phi-4.0.0.tgz#c8b3956e9eeb9343a67ddec17168386216351b5f"
+  integrity sha512-1Sdtxz5KTR0q3ikehWJcxdYYx2Cw7UYXBDdinVKJnKIETXoTu42aG8f/FMrBFVye9eP8Ny5B9ooESY8J2F2KhQ==
+  dependencies:
+    ramda "~0.27.1"
+    ramda-adjunct "~2.29.0"
+
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz#d4b3549a5db5de2683e0c1071ab4f140904bbf69"
@@ -421,6 +429,11 @@ bcrypt-pbkdf@^1.0.0:
   integrity sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
   dependencies:
     tweetnacl "^0.14.3"
+
+bcryptjs@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
+  integrity sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
 
 binary-extensions@^2.0.0:
   version "2.2.0"
@@ -3242,7 +3255,12 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-ramda@^0.27.1:
+ramda-adjunct@~2.29.0:
+  version "2.29.0"
+  resolved "https://registry.yarnpkg.com/ramda-adjunct/-/ramda-adjunct-2.29.0.tgz#64925507686561e2d64ecbb1d8e4dacf39972c22"
+  integrity sha512-hhpy/Uo4J0dePqNvLadtUuk/1ns95YC9cZARJUgak1o3JSAAkdalVrniX7eQPtcUQDp5LYO3Jx58WbqBJYA+aA==
+
+ramda@~0.27.1:
   version "0.27.1"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.27.1.tgz#66fc2df3ef873874ffc2da6aa8984658abacf5c9"
   integrity sha512-PgIdVpn5y5Yns8vqb8FzBUEYn98V3xcPgawAkkgj0YJ0qDsnHCiNmZYfOGMgOvoB0eWFLpYbhxUR3mxfDIMvpw==

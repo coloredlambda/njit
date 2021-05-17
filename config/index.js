@@ -1,5 +1,5 @@
 import dotenv from 'dotenv'
-import { defaultTo, equals } from 'ramda'
+import { defaultTo, equals } from '@meltwater/phi'
 import { name as applicationName } from '../package.json'
 
 dotenv.config({})
