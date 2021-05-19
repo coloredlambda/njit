@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "3368f679-27ba-4616-9b79-976d2d5ac9fb",
+		"name": "NJIT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"raaj.ahab@gmail.com\",\n    \"password\": \"pineapple\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"raaj.ahab@gmail.com\",\n    \"password\": \"pineapple\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/account/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"raaj.ahab@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/account/reset-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"account",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password Using Token",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"raaj.ahab@gmail.com\",\n    \"token\": \"77026df36b16bd04704836f2207d281a9936197276eb80d0176314e68b633739\",\n    \"newPassword\": \"helloworld\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/account/password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"account",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password Using Current Password",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"raaj.ahab@gmail.com\",\n    \"currentPassword\": \"pineapple\",\n    \"newPassword\": \"hellothere\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/account/password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"account",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTU5YTJmMWRmZjFmMTY2NzVlZDE1NCIsImVtYWlsIjoicmFhai5haGFiQGdtYWlsLmNvbSIsImlhdCI6MTYyMTQ2NTY4NywiZXhwIjoxNjIxNjM4NDg3fQ.d7s6tezfVgGZifXPq6zyUa77o8meuKzqhIZqf67H1Ko",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "Hello Dzifa my love",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/raaj/Downloads/Granpda funeral photos/4d1ad911-3763-4546-8426-5cc6558e5872.JPG"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTNmNjVhZmYwZmE4M2JiMThmODZlNyIsImVtYWlsIjoicmFhai5haGFiQGdtYWlsLmNvbSIsImlhdCI6MTYyMTQyMzcyNSwiZXhwIjoxNjIxNTk2NTI1fQ.PfXmjAzSkaYGr5ab-GZL_rzrjngwOgD8fSsR4f2FIOQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Hello there, I updated my first post\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/post/60a4f7ce8b17b1513a3415c4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"post",
+						"60a4f7ce8b17b1513a3415c4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTU5YTJmMWRmZjFmMTY2NzVlZDE1NCIsImVtYWlsIjoicmFhai5haGFiQGdtYWlsLmNvbSIsImlhdCI6MTYyMTQ2NTY4NywiZXhwIjoxNjIxNjM4NDg3fQ.d7s6tezfVgGZifXPq6zyUa77o8meuKzqhIZqf67H1Ko",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Post By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTUyZDA1YmFiNDczNTQwMjIxMGZlOSIsImVtYWlsIjoicmFhai5haGFiQGdtYWlsLmNvbSIsImlhdCI6MTYyMTQ0OTk1NywiZXhwIjoxNjIxNjIyNzU3fQ.6gDmchxuK418i8wP4f0ws5Uu4J5Wxmj06G1xXlBmgKI"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/post?id=60a4f7ce8b17b1513a3415c4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"post"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "60a4f7ce8b17b1513a3415c4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTNmNjVhZmYwZmE4M2JiMThmODZlNyIsImVtYWlsIjoicmFhai5haGFiQGdtYWlsLmNvbSIsImlhdCI6MTYyMTQyMzcyNSwiZXhwIjoxNjIxNTk2NTI1fQ.PfXmjAzSkaYGr5ab-GZL_rzrjngwOgD8fSsR4f2FIOQ"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/post/60a4f7ce8b17b1513a3415c4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"post",
+						"60a4f7ce8b17b1513a3415c4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
