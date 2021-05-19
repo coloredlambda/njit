@@ -5,6 +5,7 @@ import { name as applicationName } from '../package.json'
 dotenv.config({})
 
 export default ({
+  env: defaultTo('production', process.env.NODE_ENV),
   applicationName,
   endpoint: defaultTo('http://localhost:5000', process.env.ENDPOINT),
   port: defaultTo(5000, process.env.PORT),
