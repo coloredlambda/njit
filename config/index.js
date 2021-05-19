@@ -1,11 +1,12 @@
 import dotenv from 'dotenv'
-import { defaultTo, equals, isNilOrEmpty, when } from '@meltwater/phi'
+import { defaultTo, equals } from '@meltwater/phi'
 import { name as applicationName } from '../package.json'
 
 dotenv.config({})
 
 export default ({
   applicationName,
+  endpoint: defaultTo('http://localhost:5000', process.env.ENDPOINT),
   port: defaultTo(5000, process.env.PORT),
   database: {
     mongodb: {
