@@ -1,5 +1,5 @@
 import dotenv from 'dotenv'
-import { defaultTo, equals } from '@meltwater/phi'
+import { defaultTo } from '@meltwater/phi'
 import { name as applicationName } from '../package.json'
 
 dotenv.config({})
@@ -12,8 +12,9 @@ export default ({
   database: {
     mongodb: {
       uri: defaultTo('mongodb://localhost:27017/njit', process.env.MONGODB_DATABASE_URI),
-      useUnifiedTopology: equals('true', process.env.MONGODB_USE_UNIFIED_TOPOLOGY),
-      useNewUrlParser: equals('true', process.env.MONGODB_USE_NEW_URL_PARSER)
+      useUnifiedTopology: defaultTo(true, process.env.MONGODB_USE_UNIFIED_TOPOLOGY),
+      useNewUrlParser: defaultTo(true, process.env.MONGODB_USE_NEW_URL_PARSER),
+      useCreateIndex: defaultTo(true, process.env.MONGODB_USE_CREATE_INDEX)
     }
   },
   authentication: {

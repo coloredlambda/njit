@@ -2,22 +2,22 @@ import test from 'ava'
 import mongoose from 'mongoose'
 import { equals, prop, isTrue, isNotNilOrEmpty } from '@meltwater/phi'
 import request from 'supertest'
+import config from '../config'
 import server from '../lib/server'
 import user from '../fixtures/data/user'
 import post from '../fixtures/data/post'
 
 let token
 let savedPost
+const { database: { mongodb: { uri, ...options } } } = config
+const databaseUri = 'mongodb://localhost:27017/TestDB'
 
 test.before(async t => {
-  await mongoose.connect('mongodb://localhost:27017/TestDB', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
+  await mongoose.connect(databaseUri, options)
 })
 
 test.after.always(async () => {
-  await mongoose.connect('mongodb://localhost:27017/TestDB')
+  await mongoose.connect(databaseUri, options)
   await mongoose.connection.db.dropDatabase()
 })
 
