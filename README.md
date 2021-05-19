@@ -22,3 +22,8 @@
 - [supertest](https://github.com/visionmedia/supertest) - This lib is for e2e testing API
 - [awilix](https://github.com/jeffijoe/awilix) - This lib is for dependency injection
 
+## Notes
+I run out of time so I did not write as much tests as I'd have liked to but
+- There is a test in `lib/util/authentication.spec.js` to showcase my approach to unit tests
+- There is a test in `tests/e2e.spec.js` to showcase my approach to integration tests
+- There is a test in `lib/storage/mongodb/models.spec.js` to showcase my approach to snapshot tests
